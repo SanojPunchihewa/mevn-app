@@ -45,8 +45,10 @@ app.use(function (req, res, next) {
   next()
 })
 
-app.get('*', (req, res, next) => {
-    res.sendfile(__dirname + '/public/index.html')
+var paths = ['/', '/dashboard', '/register/<params here>']; // Need to pass params with /regsiter
+
+app.get(paths, (req, res, next) => {
+    res.sendFile(__dirname + '/public/index.html')
 })
  
 app.listen(PORT, ()=>{
