@@ -22,6 +22,7 @@ Vue.use(Vuetify, {
 Vue.use(VueRouter)
 
 const routes = [
+  {path: '/register', component: Register, props: true},  // Need params to this view
   {path: '/login', component: Login},
   {path: '/', component: Dash,
     children: [
